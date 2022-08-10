@@ -14,6 +14,7 @@ class CreateMailTemplatesTable extends Migration
             $table->text('subject')->nullable();
             $table->longtext('html_template');
             $table->longtext('text_template')->nullable();
+            $table->foreignId('mailable_types_id')->constrained('mailable_types');
             $table->timestamps();
         });
     }
