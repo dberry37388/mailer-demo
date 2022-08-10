@@ -16,6 +16,6 @@ class AuditReminderMail extends TemplateMailable
     public function __construct(Audit $audit)
     {
         $this->name = $audit->name;
-        $this->auditDueDate = $audit->annual_audit_date;
+        $this->auditDueDate = $audit->audit_last_completed->addYear();
     }
 }

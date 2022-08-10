@@ -11,12 +11,14 @@ class Audit extends Model
 
     protected $fillable = [
         'company',
-        'annual_audit_date'
+        'annual_audit_date',
+        'audit_last_completed'
     ];
 
     protected $dates = [
         'created_at',
         'updated_at',
-        'annual_audit_date'
+        'audit_due_date',
+        'audit_last_completed',
     ];
 }

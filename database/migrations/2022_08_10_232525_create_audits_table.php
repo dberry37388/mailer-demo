@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('audits', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
-            $table->date('audit_due_date');
+            $table->date('audit_last_completed');
             $table->timestamps();
         });
     }
