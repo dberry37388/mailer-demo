@@ -18,7 +18,7 @@ class AuditFactory extends Factory
     {
         return [
             'company_name' => $this->faker->company,
-            'audit_last_completed' => now()->subMonths(rand(2, 12)),
+            'audit_last_completed' => now()->subMonths(rand(1, 12)),
         ];
     }
 }

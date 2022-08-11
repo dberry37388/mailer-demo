@@ -9,12 +9,12 @@ class CreateMailTemplatesTable extends Migration
     public function up()
     {
         Schema::create('mail_templates', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
+            $table->foreignId('mailable_types_id');
             $table->string('mailable');
             $table->text('subject')->nullable();
             $table->longtext('html_template');
             $table->longtext('text_template')->nullable();
-            $table->foreignId('mailable_types_id')->constrained('mailable_types');
             $table->timestamps();
         });
     }

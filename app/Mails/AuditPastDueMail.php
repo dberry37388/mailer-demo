@@ -5,7 +5,7 @@ namespace App\Mails;
 use App\Models\Audit;
 use Spatie\MailTemplates\TemplateMailable;
 
-class AuditReminderMail extends TemplateMailable
+class AuditPastDueMail extends TemplateMailable
 {
     /** @var string  */
     public string $name;
